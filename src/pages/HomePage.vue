@@ -5,12 +5,28 @@
         <h1 class="text-light my-font header-text">Hello, I'm Elizabeth.</h1>
       </div>
     </section>
+    <section class="row">
+      <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, doloremque?
+        Suscipit voluptatibus voluptate voluptas quisquam voluptatum veritatis est natus enim temporibus minima
+        necessitatibus illo possimus harum rerum, cum dolore ullam.
+        Error illum quibusdam laudantium, illo aspernatur voluptates saepe nam at temporibus corporis eius itaque facere
+        praesentium voluptatibus officia asperiores porro ratione ex aliquid eveniet rerum! Temporibus fugiat velit at
+        saepe!
+        Voluptas reprehenderit nemo pariatur numquam eius, dolor explicabo asperiores incidunt fuga similique! Ab unde
+        odit consectetur aut ad molestiae repellat deleniti perferendis, iure beatae repellendus suscipit, facere
+        necessitatibus sequi facilis!</p>
+
+    </section>
   </div>
 </template>
 
 <script>
+import { onMounted, watchEffect } from "vue"
+import { logger } from "../utils/Logger.js"
+
 export default {
   setup() {
+
     return {}
   }
 }
