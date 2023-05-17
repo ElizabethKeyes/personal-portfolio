@@ -21,8 +21,6 @@
 </template>
 
 <script>
-import { onMounted, watchEffect } from "vue"
-import { logger } from "../utils/Logger.js"
 
 export default {
   setup() {

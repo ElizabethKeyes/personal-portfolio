@@ -6,10 +6,10 @@
         <h1 class="my-font text-light fs-5">My Work</h1>
       </div>
     </section>
-    <section class="row nav-row d-none" id="white-nav">
+    <section class="row nav-row hidden-nav" id="white-nav">
       <div class="col-4 d-flex justify-content-evenly">
-        <h1 class="my-font text-light fs-5">About Me</h1>
-        <h1 class="my-font text-light fs-5">My Work</h1>
+        <h1 class="my-font text-dark fs-5">About Me</h1>
+        <h1 class="my-font text-dark fs-5">My Work</h1>
       </div>
     </section>
   </div>
@@ -17,7 +17,7 @@
 
 
 <script>
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 import { logger } from "../utils/Logger.js";
 
 export default {
@@ -25,11 +25,11 @@ export default {
     function setNavStyle() {
       logger.log('setting nav style')
       if (window.scrollY >= 100) {
-        document.getElementById("transparent-nav").classList.add("d-none")
-        document.getElementById("white-nav").classList.remove("d-none")
+        document.getElementById("transparent-nav").classList.add("hidden-nav")
+        document.getElementById("white-nav").classList.remove("hidden-nav")
       } else if (window.scrollY < 100) {
-        document.getElementById("transparent-nav").classList.remove("d-none")
-        document.getElementById("white-nav").classList.add("d-none")
+        document.getElementById("transparent-nav").classList.remove("hidden-nav")
+        document.getElementById("white-nav").classList.add("hidden-nav")
       }
     }
 
@@ -52,6 +52,13 @@ export default {
   width: 100%;
   justify-content: end;
   align-items: center;
+  transition: all .3s ease
+}
+
+.hidden-nav {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease
 }
 
 #transparent-nav {
