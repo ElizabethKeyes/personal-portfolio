@@ -6,16 +6,20 @@
       </div>
     </section>
     <section class="row">
-      <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, doloremque?
-        Suscipit voluptatibus voluptate voluptas quisquam voluptatum veritatis est natus enim temporibus minima
-        necessitatibus illo possimus harum rerum, cum dolore ullam.
-        Error illum quibusdam laudantium, illo aspernatur voluptates saepe nam at temporibus corporis eius itaque facere
-        praesentium voluptatibus officia asperiores porro ratione ex aliquid eveniet rerum! Temporibus fugiat velit at
-        saepe!
-        Voluptas reprehenderit nemo pariatur numquam eius, dolor explicabo asperiores incidunt fuga similique! Ab unde
-        odit consectetur aut ad molestiae repellat deleniti perferendis, iure beatae repellendus suscipit, facere
-        necessitatibus sequi facilis!</p>
-
+      <div class="col-6 about-container">
+        <h2 class="about-header">About Me</h2>
+        <p class="my-text">I'm a Full Stack Software Developer with strong logical thinking and problem solving skills. To
+          me, it feels like there's something about writing code that just clicks with the way my brain is 'wired'. My
+          first introduction to development was in high school; I wrote a very basic webpage using strictly HTML/CSS. I
+          loved
+          being able to customize the appearance and content of my very own website, as well as having even a rudimentary
+          understanding of what was going on behind the scenes of many sites I visited. Through my continued education in
+          development, I continue to appreciate the flexibility and adaptability that can be achieved with well-written
+          code.</p>
+      </div>
+      <div class="col-6 headshot-container">
+        <img src="../assets/img/headshot.png" alt="a photo of Elizabeth" class="headshot-img">
+      </div>
     </section>
   </div>
 </template>
@@ -39,11 +43,30 @@ export default {
   height: 100vh;
 }
 
-
-
 .header-text {
   align-self: center;
   margin-left: 1em;
   font-size: 60px
+}
+
+.about-container {
+  padding: 3em;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headshot-container {
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.headshot-img {
+  object-fit: cover;
+  object-position: center;
+  height: 50vh;
+  border-radius: 5px;
 }
 </style>

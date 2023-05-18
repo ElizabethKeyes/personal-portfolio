@@ -4,12 +4,14 @@
       <div class="col-4 d-flex justify-content-evenly">
         <h1 class="my-font text-light fs-5">About Me</h1>
         <h1 class="my-font text-light fs-5">My Work</h1>
+        <h1 class="my-font text-light fs-5">Contact</h1>
       </div>
     </section>
     <section class="row nav-row hidden-nav" id="white-nav">
       <div class="col-4 d-flex justify-content-evenly">
         <h1 class="my-font text-dark fs-5">About Me</h1>
         <h1 class="my-font text-dark fs-5">My Work</h1>
+        <h1 class="my-font text-dark fs-5">Contact</h1>
       </div>
     </section>
   </div>
@@ -24,10 +26,10 @@ export default {
   setup() {
     function setNavStyle() {
       logger.log('setting nav style')
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= 5) {
         document.getElementById("transparent-nav").classList.add("hidden-nav")
         document.getElementById("white-nav").classList.remove("hidden-nav")
-      } else if (window.scrollY < 100) {
+      } else if (window.scrollY < 5) {
         document.getElementById("transparent-nav").classList.remove("hidden-nav")
         document.getElementById("white-nav").classList.add("hidden-nav")
       }
