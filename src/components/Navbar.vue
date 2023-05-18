@@ -1,14 +1,14 @@
 <template>
   <div class="container-fluid">
     <section class="row nav-row" id="transparent-nav">
-      <div class="col-4 d-flex justify-content-evenly">
+      <div class="col-md-4 d-flex justify-content-evenly">
         <h1 class="my-font menu-text" @click="scrollPage('about-me')">About Me</h1>
         <h1 class="my-font menu-text" @click="scrollPage('my-work')">My Work</h1>
         <h1 class="my-font menu-text" @click="scrollPage('contact')">Contact</h1>
       </div>
     </section>
     <section class="row nav-row hidden-nav" id="white-nav">
-      <div class="col-4 d-flex justify-content-evenly">
+      <div class="col-md-4 d-flex justify-content-evenly">
         <h1 class="my-font menu-text" @click="scrollPage('about-me')">About Me</h1>
         <h1 class="my-font menu-text" @click="scrollPage('my-work')">My Work</h1>
         <h1 class="my-font menu-text" @click="scrollPage('contact')">Contact</h1>
@@ -78,5 +78,16 @@ export default {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #transparent-nav {
+    visibility: hidden;
+  }
+
+  .hidden-nav {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 </style>

@@ -11,7 +11,7 @@
 
     <!-- ABOUT ME -->
     <section class="row">
-      <div class="col-6 about-container">
+      <div class="col-md-7 order-2 order-md-1 about-container">
         <!-- TODO Break out about section into "work" and "play" or some variation?-->
         <h2 class="about-header" id="about-me">About Me</h2>
         <p class="my-text">I'm a Full Stack Software Developer with strong logical thinking and problem solving skills. To
@@ -23,7 +23,7 @@
           development, I continue to appreciate the flexibility and adaptability that can be achieved with well-written
           code.</p>
       </div>
-      <div class="col-6 headshot-container">
+      <div class="col-md-5 order-1 order-md-2 headshot-container">
         <img src="../assets/img/headshot.png" alt="a photo of Elizabeth" class="headshot-img">
       </div>
     </section>
@@ -31,14 +31,23 @@
     <!-- MY WORK -->
     <section class="row">
       <div class="col-12">
-        <h1 id="my-work">this is my work section</h1>
+        <h2 id="my-work">Featured Applications</h2>
+        <section class="row application-container">
+          <div class="col-6">
+            <img src="https://img.freepik.com/free-vector/girl-park-ranger-uniform_1308-37315.jpg?w=2000" alt=""
+              class="img-fluid">
+          </div>
+          <div class="col-6">
+            <h3></h3>
+          </div>
+        </section>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="row">
       <div class="col-12">
-        <h1 id="contact">this is my contact section</h1>
+        <h2 id="contact">this is my contact section</h2>
       </div>
     </section>
   </div>
@@ -103,5 +112,20 @@ export default {
 
 #contact {
   height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .headshot-container {
+    padding-bottom: 0;
+  }
+
+  .about-container {
+    padding-top: 2em;
+  }
+
+  .header-text {
+    font-size: 33px;
+    margin-left: .5em;
+  }
 }
 </style>
