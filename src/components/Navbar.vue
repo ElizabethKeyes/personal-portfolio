@@ -2,16 +2,16 @@
   <div class="container-fluid">
     <section class="row nav-row" id="transparent-nav">
       <div class="col-4 d-flex justify-content-evenly">
-        <h1 class="my-font text-light fs-5">About Me</h1>
-        <h1 class="my-font text-light fs-5">My Work</h1>
-        <h1 class="my-font text-light fs-5">Contact</h1>
+        <h1 class="my-font menu-text" @click="scrollPage('about-me')">About Me</h1>
+        <h1 class="my-font menu-text" @click="scrollPage('my-work')">My Work</h1>
+        <h1 class="my-font menu-text" @click="scrollPage('contact')">Contact</h1>
       </div>
     </section>
     <section class="row nav-row hidden-nav" id="white-nav">
       <div class="col-4 d-flex justify-content-evenly">
-        <h1 class="my-font text-dark fs-5">About Me</h1>
-        <h1 class="my-font text-dark fs-5">My Work</h1>
-        <h1 class="my-font text-dark fs-5">Contact</h1>
+        <h1 class="my-font menu-text" @click="scrollPage('about-me')">About Me</h1>
+        <h1 class="my-font menu-text" @click="scrollPage('my-work')">My Work</h1>
+        <h1 class="my-font menu-text" @click="scrollPage('contact')">Contact</h1>
       </div>
     </section>
   </div>
@@ -25,7 +25,6 @@ import { logger } from "../utils/Logger.js";
 export default {
   setup() {
     function setNavStyle() {
-      logger.log('setting nav style')
       if (window.scrollY >= 5) {
         document.getElementById("transparent-nav").classList.add("hidden-nav")
         document.getElementById("white-nav").classList.remove("hidden-nav")
@@ -41,7 +40,10 @@ export default {
       })
     })
     return {
-
+      scrollPage(location) {
+        const yValue = document.getElementById(`${location}`).offsetTop
+        scrollTo(0, (yValue - 115))
+      }
     }
   }
 }
@@ -68,6 +70,13 @@ export default {
 }
 
 #white-nav {
-  background-color: white;
+  background-color: #e5e5e5;
+}
+
+.menu-text {
+  color: #111927;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 </style>
