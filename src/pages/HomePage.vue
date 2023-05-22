@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid my-font">
-    <!-- HERO IMAGE -->
+    <!-- #region HERO IMAGE -->
     <section class="row">
       <div class="col-12 d-flex px-0 background-img">
         <div class="header-card">
@@ -8,12 +8,12 @@
         </div>
       </div>
     </section>
-
-    <!-- ABOUT ME -->
+    <!-- #endregion -->
+    <!-- #region ABOUT ME -->
     <section class="row" id="about-me">
       <div class="col-md-7 order-2 order-md-1 about-container">
         <!-- TODO Break out about section into "work" and "play" or some variation?-->
-        <h2 class="about-header">About Me</h2>
+        <h2 class="about-header"><u>About Me</u></h2>
         <p>I'm a Full Stack Software Developer with strong logical thinking and problem solving skills. To
           me, it feels like there's something about writing code that just clicks with the way my brain is 'wired'. My
           first introduction to development was in high school; I wrote a very basic webpage using strictly HTML/CSS. I
@@ -27,14 +27,15 @@
         <img src="../assets/img/headshot.png" alt="a photo of Elizabeth" class="headshot-img">
       </div>
     </section>
-
-    <!-- MY WORK -->
+    <!-- #endregion -->
+    <!-- #region MY WORK -->
     <section class="row">
       <div class="col-12">
         <section class="row application-container">
           <div class="col-12">
-            <h2 id="my-work">Featured Applications</h2>
+            <h2 id="my-work"><u>Featured Applications</u></h2>
           </div>
+          <!-- #region Parkitect -->
           <div class="col-md-6 application-description">
             <h3 class="text-center">Parkitect</h3>
             <p>Parkitect is an application developed as a team of four over the course of two weeks.
@@ -46,23 +47,33 @@
               functionality. The backend of this application was written using Node.js in conjunction with MongoDB, while
               the front end was written using Vue.js.</p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 application-card-container">
             <div class="application-card">
               <!-- TODO for mobile screens, show mobile screenshot instead of desktop -->
               <img src="../assets/img/parkitect.png" alt="a screenshot of the Parkitect application"
                 class="application-img">
+              <img src="../assets/img/parkitect-mobile.png" alt="a screenshot of the Parkitect application"
+                class="mobile-application-img">
             </div>
+          </div>
+          <!-- #endregion -->
+          <div class="col-md-6 application-card-container">
+
+          </div>
+          <div class="col-md-6 application-description">
+            <h3 class="text-center">Keepr</h3>
           </div>
         </section>
       </div>
     </section>
-
-    <!-- CONTACT -->
+    <!-- #endregion -->
+    <!-- #region CONTACT -->
     <section class="row">
       <div class="col-12">
         <h2 id="contact">this is my contact section</h2>
       </div>
     </section>
+    <!-- #endregion -->
   </div>
 </template>
 
@@ -134,6 +145,11 @@ export default {
   justify-content: center;
 }
 
+.application-card-container {
+  display: flex;
+  justify-content: center;
+}
+
 .application-card {
   background-color: white;
   box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
@@ -148,9 +164,13 @@ export default {
 
 .application-img {
   object-fit: cover;
-  object-position: center;
+  object-position: top;
   width: 100%;
   border-radius: 5px;
+}
+
+.mobile-application-img {
+  display: none;
 }
 
 #contact {
@@ -173,6 +193,21 @@ export default {
 
   .application-container {
     padding: .5em;
+  }
+
+  .application-card {
+    width: 80%
+  }
+
+  .application-img {
+    display: none;
+  }
+
+  .mobile-application-img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
   }
 }
 </style>
