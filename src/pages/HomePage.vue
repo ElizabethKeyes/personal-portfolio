@@ -8,7 +8,7 @@
         </div>
       </div>
     </section>
-    <!-- #endregion -->
+    <!-- #endregion HERO IMAGE -->
     <!-- #region ABOUT ME -->
     <section class="row" id="about-me">
       <div class="col-md-7 order-2 order-md-1 about-container">
@@ -27,53 +27,64 @@
         <img src="../assets/img/headshot.png" alt="a photo of Elizabeth" class="headshot-img">
       </div>
     </section>
-    <!-- #endregion -->
+    <!-- #endregion ABOUT ME -->
     <!-- #region MY WORK -->
-    <section class="row">
+    <section class="row application-container">
       <div class="col-12">
-        <section class="row application-container">
-          <div class="col-12">
-            <h2 id="my-work"><u>Featured Applications</u></h2>
-          </div>
-          <!-- #region Parkitect -->
-          <div class="col-md-6 application-description">
-            <h3 class="text-center">Parkitect</h3>
-            <p>Parkitect is an application developed as a team of four over the course of two weeks.
-              During this time, we
-              abided by Agile Methodologies and I acted as the Product Owner. This application provides a place for users
-              to
-              research and plan a trip to any (or multiple) of the 63 National Parks in the United States. We utilized
-              multiple APIs including National Parks Service, Google Maps, and EmailJS in order to achieve our desired
-              functionality. The backend of this application was written using Node.js in conjunction with MongoDB, while
-              the front end was written using Vue.js.</p>
-          </div>
-          <div class="col-md-6 application-card-container">
-            <div class="application-card">
-              <!-- TODO for mobile screens, show mobile screenshot instead of desktop -->
-              <img src="../assets/img/parkitect.png" alt="a screenshot of the Parkitect application"
-                class="application-img">
-              <img src="../assets/img/parkitect-mobile.png" alt="a screenshot of the Parkitect application"
-                class="mobile-application-img">
-            </div>
-          </div>
-          <!-- #endregion -->
-          <div class="col-md-6 application-card-container">
-
-          </div>
-          <div class="col-md-6 application-description">
-            <h3 class="text-center">Keepr</h3>
-          </div>
-        </section>
+        <h2 id="my-work"><u>Featured Applications</u></h2>
       </div>
+      <!-- #region PARKITECT -->
+      <div class="col-md-6 application-description">
+        <h3 class="text-center">Parkitect</h3>
+        <p>Parkitect is an application developed as a team of four over the course of two weeks.
+          During this time, we
+          abided by Agile Methodologies and I acted as the Product Owner. This application provides a place for users
+          to
+          research and plan a trip to any (or multiple) of the 63 National Parks in the United States. We utilized
+          multiple APIs including National Parks Service, Google Maps, and EmailJS in order to achieve our desired
+          functionality. The backend of this application was written using Node.js in conjunction with MongoDB, while
+          the front end was written using Vue.js.</p>
+      </div>
+      <div class="col-md-6 application-card-container">
+        <div class="application-card">
+          <img src="../assets/img/parkitect.png" alt="a screenshot of the Parkitect application" class="application-img">
+          <img src="../assets/img/parkitect-mobile.png" alt="a screenshot of the Parkitect application"
+            class="mobile-application-img">
+        </div>
+      </div>
+      <!-- #endregion PARKITECT-->
+      <!-- #region KEEPR -->
+      <div class="col-md-6 order-md-1 order-2 application-card-container">
+        <div class="application-card">
+          <img src="../assets/img/keepr.png" alt="a screenshot of the Keepr application" class="application-img">
+          <img src="../assets/img/keepr-mobile.png" alt="a screenshot of the Keepr application"
+            class="mobile-application-img">
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2 order-1 application-description">
+        <h3 class="text-center">Keepr</h3>
+      </div>
+      <!-- #endregion KEEPR -->
+      <!-- #region TOWER -->
+      <div class="col-md-6 order-3 application-description">
+        <h3 class="text-center">Tower</h3>
+      </div>
+      <div class="col-md-6 order-4 application-card-container">
+        <div class="application-card">
+          <img src="../assets/img/tower.png" alt="a screenshot of the Tower application" class="application-img">
+          <!-- TODO need to correct mobile view on Tower and add screenshot here -->
+        </div>
+      </div>
+      <!-- #endregion TOWER -->
     </section>
-    <!-- #endregion -->
+    <!-- #endregion MY WORK -->
     <!-- #region CONTACT -->
     <section class="row">
       <div class="col-12">
         <h2 id="contact">this is my contact section</h2>
       </div>
     </section>
-    <!-- #endregion -->
+    <!-- #endregion CONTACT-->
   </div>
 </template>
 
@@ -143,11 +154,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
 .application-card-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
 .application-card {
