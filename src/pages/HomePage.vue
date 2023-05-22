@@ -46,28 +46,41 @@
           the front end was written using Vue.js.</p>
       </div>
       <div class="col-md-6 application-card-container">
-        <div class="application-card">
-          <img src="../assets/img/parkitect.png" alt="a screenshot of the Parkitect application" class="application-img">
-          <img src="../assets/img/parkitect-mobile.png" alt="a screenshot of the Parkitect application"
-            class="mobile-application-img">
-        </div>
+        <a href="https://joeparkitect.onrender.com/#/" target="blank">
+          <div class="application-card">
+            <img src="../assets/img/parkitect.png" alt="a screenshot of the Parkitect application"
+              class="application-img">
+            <img src="../assets/img/parkitect-mobile.png" alt="a screenshot of the Parkitect application"
+              class="mobile-application-img">
+          </div>
+        </a>
       </div>
       <!-- #endregion PARKITECT-->
       <!-- #region KEEPR -->
       <div class="col-md-6 order-md-1 order-2 application-card-container">
-        <div class="application-card">
-          <img src="../assets/img/keepr.png" alt="a screenshot of the Keepr application" class="application-img">
-          <img src="../assets/img/keepr-mobile.png" alt="a screenshot of the Keepr application"
-            class="mobile-application-img">
-        </div>
+        <a href="https://keepr-310k.onrender.com/#/" target="blank">
+          <div class="application-card">
+            <img src="../assets/img/keepr.png" alt="a screenshot of the Keepr application" class="application-img">
+            <img src="../assets/img/keepr-mobile.png" alt="a screenshot of the Keepr application"
+              class="mobile-application-img">
+          </div>
+        </a>
       </div>
       <div class="col-md-6 order-md-2 order-1 application-description">
         <h3 class="text-center">Keepr</h3>
+        <p>Keepr is a social platform that allows users to post 'Keeps' with brief descriptions. Those Keeps may be saved
+          so a user's 'Vault', which can be marked either public or private. All users have a public profile which
+          displays the Keeps they have created, as well as their public Vaults. This application was written using Vue as
+          well as C# and SQL with a MySQL database.</p>
       </div>
       <!-- #endregion KEEPR -->
       <!-- #region TOWER -->
       <div class="col-md-6 order-3 application-description">
         <h3 class="text-center">Tower</h3>
+        <p>Tower is a ticketing website that allows users to post their events for the community to see. Users may mark
+          themselves as 'attending' an event and their name and photo will be added to the attendees component. Events may
+          be cancelled and will stop accepting new attendees if they are cancelled or capacity is reached. Users may also
+          utilize the comments section to share their thoughts on the upcoming activity.</p>
       </div>
       <div class="col-md-6 order-4 application-card-container">
         <div class="application-card">
@@ -175,12 +188,18 @@ export default {
   border-radius: 5px;
 }
 
+.application-card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
 .application-img {
   object-fit: cover;
   object-position: top;
   width: 100%;
   border-radius: 5px;
 }
+
 
 .mobile-application-img {
   display: none;
