@@ -80,7 +80,8 @@
         <p>Tower is a ticketing website that allows users to post their events for the community to see. Users may mark
           themselves as 'attending' an event and their name and photo will be added to the attendees component. Events may
           be cancelled and will stop accepting new attendees if they are cancelled or capacity is reached. Users may also
-          utilize the comments section to share their thoughts on the upcoming activity.</p>
+          utilize the comments section to share their thoughts on the upcoming activity. The front end was written using
+          Vue.js, while the back end utilizes Node.js.</p>
       </div>
       <div class="col-md-6 order-4 application-card-container">
         <div class="application-card">
@@ -92,9 +93,29 @@
     </section>
     <!-- #endregion MY WORK -->
     <!-- #region CONTACT -->
-    <section class="row">
+    <section class="row justify-content-center">
       <div class="col-12">
-        <h2 id="contact">this is my contact section</h2>
+        <h3>Contact Me</h3>
+      </div>
+      <div class="col-7">
+        <form class="row" @submit.prevent="sendEmail()">
+          <div class="col-md-6">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control form-input" required v-model="editable.name">
+          </div>
+          <div class="col-md-6">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control form-input" required v-model="editable.email">
+          </div>
+          <div class="col-12">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10" class="form-control form-input" required
+              v-model="editable.message"></textarea>
+            <div class="d-flex justify-content-end mb-3">
+              <button class="btn btn-success" type="submit">Send</button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
     <!-- #endregion CONTACT-->
@@ -102,11 +123,29 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { logger } from "../utils/Logger.js";
+import Pop from "../utils/Pop.js";
+import { emailsService } from "../services/EmailsService.js"
+
 
 export default {
   setup() {
+    const editable = ref({})
 
-    return {}
+    return {
+      editable,
+
+      async sendEmail() {
+        try {
+          const emailData = editable.value
+          await emailsService.sendEmail(emailData)
+        } catch (error) {
+          logger.error(error)
+          Pop.error(error)
+        }
+      }
+    }
   }
 }
 </script>
@@ -205,8 +244,9 @@ export default {
   display: none;
 }
 
-#contact {
-  height: 100vh;
+.form-input {
+  border: none !important;
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -227,9 +267,6 @@ export default {
     padding: .5em;
   }
 
-  .application-card {
-    width: 80%
-  }
 
   .application-img {
     display: none;

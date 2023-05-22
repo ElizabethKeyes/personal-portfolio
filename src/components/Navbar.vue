@@ -7,7 +7,7 @@
         <h1 class="my-font menu-text" @click="scrollPage('contact')">Contact</h1>
       </div>
     </section>
-    <section class="row nav-row hidden-nav" id="white-nav">
+    <section class="row nav-row hidden-nav elevation-2" id="white-nav">
       <div class="col-md-4 d-flex justify-content-evenly">
         <h1 class="my-font menu-text" @click="scrollPage('about-me')">About Me</h1>
         <h1 class="my-font menu-text" @click="scrollPage('my-work')">My Work</h1>
@@ -56,7 +56,8 @@ export default {
   width: 100%;
   justify-content: end;
   align-items: center;
-  transition: all .3s ease
+  transition: all .3s ease;
+  z-index: 2
 }
 
 .hidden-nav {
