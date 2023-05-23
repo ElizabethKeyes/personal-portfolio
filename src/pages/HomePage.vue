@@ -84,10 +84,13 @@
           Vue.js, while the back end utilizes Node.js.</p>
       </div>
       <div class="col-md-6 order-4 application-card-container">
-        <div class="application-card">
-          <img src="../assets/img/tower.png" alt="a screenshot of the Tower application" class="application-img">
-          <!-- TODO need to correct mobile view on Tower and add screenshot here -->
-        </div>
+        <a href="https://tower-ds80.onrender.com/#/" target="blank">
+          <div class="application-card">
+            <img src="../assets/img/tower.png" alt="a screenshot of the Tower application" class="application-img">
+            <img src="../assets/img/tower-mobile.png" alt="a screenshot of the Tower application"
+              class="mobile-application-img">
+          </div>
+        </a>
       </div>
       <!-- #endregion TOWER -->
     </section>
