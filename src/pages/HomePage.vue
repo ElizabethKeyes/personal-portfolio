@@ -96,11 +96,16 @@
     </section>
     <!-- #endregion MY WORK -->
     <!-- #region CONTACT -->
-    <section class="row justify-content-center" id="contact">
+    <section class="row contact-row" id="contact">
       <div class="col-12">
         <h3>Contact Me</h3>
       </div>
-      <div class="col-md-5">
+      <div class="col-2 mb-2 mb-md-0 order-1 logo-container">
+        <a href="https://github.com/ElizabethKeyes" target="blank">
+          <img src="../assets/img/github-mark.png" alt="the GitHub logo" class="logo-img">
+        </a>
+      </div>
+      <div class="col-md-5 order-3 order-md-2">
         <form ref="form" class="row" @submit.prevent="sendEmail()">
           <div class="col-md-6">
             <label for="name">Name</label>
@@ -119,6 +124,11 @@
             </div>
           </div>
         </form>
+      </div>
+      <div class="col-2 mb-2 mb-md-0 order-2 order-md-3 justify-content-end logo-container">
+        <a href="https://www.linkedin.com/in/ElizabethSKeyes/" target="blank">
+          <img src="../assets/img/LinkedIn_icon.svg.png" alt="the LinkedIn logo" class="logo-img">
+        </a>
       </div>
     </section>
     <!-- #endregion CONTACT-->
@@ -249,9 +259,30 @@ export default {
   display: none;
 }
 
+.contact-row {
+  justify-content: space-evenly;
+}
+
 .form-input {
   border: none !important;
   margin-bottom: 1em;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.logo-img:hover {
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
 @media screen and (max-width: 768px) {
@@ -282,6 +313,10 @@ export default {
     object-fit: cover;
     object-position: center;
     height: 100%;
+  }
+
+  .contact-row {
+    justify-content: center;
   }
 }
 </style>
