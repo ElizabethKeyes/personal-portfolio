@@ -80,6 +80,8 @@ export default {
   font-weight: bold;
   margin-bottom: 0;
   cursor: pointer;
+  text-shadow: 1px 1px 1px #e5e5e5;
+
 }
 
 @media screen and (max-width: 768px) {

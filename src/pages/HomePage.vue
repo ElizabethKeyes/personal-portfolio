@@ -98,7 +98,7 @@
     <!-- #region CONTACT -->
     <section class="row contact-row" id="contact">
       <div class="col-12">
-        <h3>Contact Me</h3>
+        <h3 class="contact-text"><u>Contact Me</u></h3>
       </div>
       <div class="col-2 mb-2 mb-md-0 order-1 logo-container">
         <a href="https://github.com/ElizabethKeyes" target="blank">
@@ -168,9 +168,10 @@ export default {
 <style scoped lang="scss">
 .background-img {
   // TODO need an alternate background image for mobile displays
-  background-image: url('https://images.unsplash.com/photo-1515508268448-8d0d292bc49a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80');
+  // background-image: url('https://images.unsplash.com/photo-1515508268448-8d0d292bc49a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80');
+  background-image: url('https://images.unsplash.com/photo-1581087659125-322b6be59e99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80');
   // background-image: url('https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80');
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -263,6 +264,10 @@ export default {
   justify-content: space-evenly;
 }
 
+.contact-text {
+  padding-left: 42px
+}
+
 .form-input {
   border: none !important;
   margin-bottom: 1em;
@@ -286,6 +291,10 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
+  .background-img {
+    background-image: url('https://images.unsplash.com/photo-1602335422296-6c6346ee71f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80')
+  }
+
   .headshot-container {
     padding-bottom: 0;
   }
