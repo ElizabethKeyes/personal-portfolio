@@ -96,11 +96,11 @@
     </section>
     <!-- #endregion MY WORK -->
     <!-- #region CONTACT -->
-    <section class="row justify-content-center">
+    <section class="row justify-content-center" id="contact">
       <div class="col-12">
         <h3>Contact Me</h3>
       </div>
-      <div class="col-7">
+      <div class="col-md-5">
         <form ref="form" class="row" @submit.prevent="sendEmail()">
           <div class="col-md-6">
             <label for="name">Name</label>
