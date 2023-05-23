@@ -101,19 +101,19 @@
         <h3>Contact Me</h3>
       </div>
       <div class="col-7">
-        <form class="row" @submit.prevent="sendEmail()">
+        <form ref="form" class="row" @submit.prevent="sendEmail()">
           <div class="col-md-6">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" class="form-control form-input" required v-model="editable.name">
+            <input type="text" name="name" id="name" class="form-control form-input" required :value="inputFieldReset">
           </div>
           <div class="col-md-6">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control form-input" required v-model="editable.email">
+            <input type="email" name="email" id="email" class="form-control form-input" required :value="inputFieldReset">
           </div>
           <div class="col-12">
             <label for="message">Message</label>
             <textarea name="message" id="message" cols="30" rows="10" class="form-control form-input" required
-              v-model="editable.message"></textarea>
+              :value="inputFieldReset"></textarea>
             <div class="d-flex justify-content-end mb-3">
               <button class="btn btn-success" type="submit">Send</button>
             </div>
@@ -134,17 +134,19 @@ import { emailsService } from "../services/EmailsService.js"
 
 export default {
   setup() {
-    const editable = ref({})
+    const form = ref(null)
+    const inputFieldReset = ref(null)
 
     return {
-      editable,
+      form,
+      inputFieldReset,
 
       async sendEmail() {
         try {
-          const emailData = editable.value
+          const emailData = form.value
           await emailsService.sendEmail(emailData)
+          inputFieldReset.value = " ";
         } catch (error) {
-          logger.error(error)
           Pop.error(error)
         }
       }
