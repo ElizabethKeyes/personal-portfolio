@@ -5,6 +5,7 @@
       <div class="col-12 d-flex px-0 background-img">
         <div class="header-card">
           <h1 class="text-dark my-font header-text">Hello, I'm Elizabeth.</h1>
+          <button class="btn btn-outline-dark resume-button">View Resume</button>
         </div>
       </div>
     </section>
@@ -101,7 +102,7 @@
         <h3 class="contact-text"><u>Contact Me</u></h3>
       </div>
       <div class="col-2 mb-2 mb-md-0 order-1 logo-container">
-        <a href="https://github.com/ElizabethKeyes" target="blank">
+        <a href="https://github.com/ElizabethKeyes" target="blank" class="d-flex justify-content-center">
           <img src="../assets/img/github-mark.png" alt="the GitHub logo" class="logo-img">
         </a>
       </div>
@@ -126,7 +127,7 @@
         </form>
       </div>
       <div class="col-2 mb-2 mb-md-0 order-2 order-md-3 justify-content-end logo-container">
-        <a href="https://www.linkedin.com/in/ElizabethSKeyes/" target="blank">
+        <a href="https://www.linkedin.com/in/ElizabethSKeyes/" target="blank" class="d-flex justify-content-center">
           <img src="../assets/img/LinkedIn_icon.svg.png" alt="the LinkedIn logo" class="logo-img">
         </a>
       </div>
@@ -137,7 +138,6 @@
 
 <script>
 import { ref } from "vue";
-import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 import { emailsService } from "../services/EmailsService.js"
 
@@ -167,7 +167,6 @@ export default {
 
 <style scoped lang="scss">
 .background-img {
-  // TODO need an alternate background image for mobile displays
   // background-image: url('https://images.unsplash.com/photo-1515508268448-8d0d292bc49a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80');
   background-image: url('https://images.unsplash.com/photo-1581087659125-322b6be59e99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80');
   // background-image: url('https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80');
@@ -182,11 +181,21 @@ export default {
   border-radius: 5px;
   padding: .5em;
   margin-bottom: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%
 }
 
 .header-text {
   margin-left: 1em;
+  margin-bottom: 0;
   font-size: 60px
+}
+
+.resume-button {
+  height: 5vh;
+  margin-right: 2em;
 }
 
 .about-container {
@@ -234,7 +243,6 @@ export default {
 .application-card {
   background-color: white;
   box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-  width: 100%;
   height: 45vh;
   padding: .5em;
   display: flex;
@@ -295,6 +303,15 @@ export default {
     background-image: url('https://images.unsplash.com/photo-1602335422296-6c6346ee71f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80')
   }
 
+  .header-card {
+    flex-direction: column;
+  }
+
+  .resume-button {
+    margin-top: 1em;
+    margin-right: 0;
+  }
+
   .headshot-container {
     padding-bottom: 0;
   }
@@ -312,6 +329,9 @@ export default {
     padding: .5em;
   }
 
+  .application-card {
+    width: fit-content;
+  }
 
   .application-img {
     display: none;
