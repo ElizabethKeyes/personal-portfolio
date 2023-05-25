@@ -1,24 +1,20 @@
 <template>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="resumeModalLabel">Resume</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <img src="../assets/img/resume-1.png" alt="my resume" class="resume-img mb-3">
+          <img src="../assets/img/resume-2.png" alt="my resume" class="resume-img">
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<!-- TODO add resume to modal -->
 
 
 <script>
@@ -30,4 +26,10 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.resume-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+</style>

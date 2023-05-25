@@ -5,7 +5,8 @@
       <div class="col-12 d-flex px-0 background-img">
         <div class="header-card">
           <h1 class="text-dark my-font header-text">Hello, I'm Elizabeth.</h1>
-          <button class="btn btn-outline-dark resume-button">View Resume</button>
+          <button class="btn btn-outline-dark resume-button" data-bs-toggle="modal" data-bs-target="#resumeModal">View
+            Resume</button>
         </div>
       </div>
     </section>
@@ -134,34 +135,36 @@
     </section>
     <!-- #endregion CONTACT-->
   </div>
+  <Modal />
 </template>
 
 <script>
 import { ref } from "vue";
 import Pop from "../utils/Pop.js";
 import { emailsService } from "../services/EmailsService.js"
+import Modal from "../components/Modal.vue";
 
 
 export default {
   setup() {
-    const form = ref(null)
-    const inputFieldReset = ref(null)
-
+    const form = ref(null);
+    const inputFieldReset = ref(null);
     return {
       form,
       inputFieldReset,
-
       async sendEmail() {
         try {
-          const emailData = form.value
-          await emailsService.sendEmail(emailData)
+          const emailData = form.value;
+          await emailsService.sendEmail(emailData);
           inputFieldReset.value = " ";
-        } catch (error) {
-          Pop.error(error)
+        }
+        catch (error) {
+          Pop.error(error);
         }
       }
-    }
-  }
+    };
+  },
+  components: { Modal }
 }
 </script>
 
