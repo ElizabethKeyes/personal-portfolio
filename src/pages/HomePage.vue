@@ -47,7 +47,7 @@
           the front end was written using Vue.js.</p>
       </div>
       <div class="col-md-6 application-card-container">
-        <a href="https://joeparkitect.onrender.com/#/" target="blank">
+        <a href="https://joeparkitect.onrender.com/#/" target="blank" class="application-a-tag">
           <div class="application-card">
             <img src="../assets/img/parkitect.png" alt="a screenshot of the Parkitect application"
               class="application-img">
@@ -59,7 +59,7 @@
       <!-- #endregion PARKITECT-->
       <!-- #region KEEPR -->
       <div class="col-md-6 order-md-1 order-2 application-card-container">
-        <a href="https://keepr-310k.onrender.com/#/" target="blank">
+        <a href="https://keepr-310k.onrender.com/#/" target="blank" class="application-a-tag">
           <div class="application-card">
             <img src="../assets/img/keepr.png" alt="a screenshot of the Keepr application" class="application-img">
             <img src="../assets/img/keepr-mobile.png" alt="a screenshot of the Keepr application"
@@ -85,7 +85,7 @@
           Vue.js, while the back end utilizes Node.js.</p>
       </div>
       <div class="col-md-6 order-4 application-card-container">
-        <a href="https://tower-ds80.onrender.com/#/" target="blank">
+        <a href="https://tower-ds80.onrender.com/#/" target="blank" class="application-a-tag">
           <div class="application-card">
             <img src="../assets/img/tower.png" alt="a screenshot of the Tower application" class="application-img">
             <img src="../assets/img/tower-mobile.png" alt="a screenshot of the Tower application"
@@ -238,6 +238,11 @@ export default {
   display: flex;
   justify-content: center;
   margin-bottom: 3em;
+}
+
+.application-a-tag {
+  display: flex;
+  justify-content: center;
 }
 
 .application-card {
