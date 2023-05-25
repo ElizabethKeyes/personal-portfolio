@@ -20,7 +20,6 @@
 
 <script>
 import { onMounted } from "vue";
-import { logger } from "../utils/Logger.js";
 
 export default {
   setup() {

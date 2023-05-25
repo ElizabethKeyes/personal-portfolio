@@ -5,9 +5,9 @@
   <main>
     <router-view />
   </main>
-  <footer class="bg-dark text-light">
+  <!-- <footer class="bg-dark text-light">
     So long and thanks for all the fish 🐬
-  </footer>
+  </footer> -->
 </template>
 
 <script>

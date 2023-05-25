@@ -15,7 +15,7 @@
     <section class="row" id="about-me">
       <div class="col-md-7 order-2 order-md-1 about-container">
         <!-- TODO Break out about section into "work" and "play" or some variation?-->
-        <h2 class="about-header"><u>About Me</u></h2>
+        <h2 class="about-header center-text-mobile"><u>About Me</u></h2>
         <p>I'm a Full Stack Software Developer with strong logical thinking and problem solving skills. To
           me, it feels like there's something about writing code that just clicks with the way my brain is 'wired'. My
           first introduction to development was in high school; I wrote a very basic webpage using strictly HTML/CSS. I
@@ -33,7 +33,7 @@
     <!-- #region MY WORK -->
     <section class="row application-container">
       <div class="col-12">
-        <h2 id="my-work"><u>Featured Applications</u></h2>
+        <h2 id="my-work" class="center-text-mobile"><u>Featured Applications</u></h2>
       </div>
       <!-- #region PARKITECT -->
       <div class="col-md-6 application-description">
@@ -100,7 +100,7 @@
     <!-- #region CONTACT -->
     <section class="row contact-row" id="contact">
       <div class="col-12">
-        <h3 class="contact-text"><u>Contact Me</u></h3>
+        <h2 class="contact-text center-text-mobile"><u>Contact Me</u></h2>
       </div>
       <div class="col-2 mb-2 mb-md-0 order-1 logo-container">
         <a href="https://github.com/ElizabethKeyes" target="blank" class="d-flex justify-content-center">
@@ -170,13 +170,15 @@ export default {
 
 <style scoped lang="scss">
 .background-img {
-  // background-image: url('https://images.unsplash.com/photo-1515508268448-8d0d292bc49a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80');
   background-image: url('https://images.unsplash.com/photo-1581087659125-322b6be59e99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80');
-  // background-image: url('https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80');
   background-position: bottom;
   background-size: cover;
   width: 100%;
   height: 100vh;
+}
+
+.about-header {
+  margin-bottom: 1em;
 }
 
 .header-card {
@@ -235,6 +237,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 3em;
+
+  p {
+    font-size: 18px;
+  }
 }
 
 .application-card-container {
@@ -307,6 +313,15 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
+  .center-text-mobile {
+    text-align: center;
+  }
+
+  .contact-text {
+    padding-left: 0px;
+    margin-bottom: 1em;
+  }
+
   .background-img {
     background-image: url('https://images.unsplash.com/photo-1602335422296-6c6346ee71f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80')
   }
